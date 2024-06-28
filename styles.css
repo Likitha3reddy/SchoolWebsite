@@ -1,0 +1,428 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.navbar img {
+  height: 100%;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  /* margin-right: 6%; */
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 25px;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: #f2f2f2;
+  position: relative;
+  padding: 1px 0;
+}
+.submenu a {
+  content: none;
+  transform: scale(0.9);
+}
+.submenu a:hover {
+  content: none;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.submenu a:hover:before {
+  content: none;
+}
+.menu li a:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background-color: #f2f2f2;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.menu li a:hover:before {
+  width: 100%;
+}
+.submenu {
+  position: absolute;
+  top: 300%;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #402327;
+  padding: 10px;
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transform-origin: top center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.submenu li {
+  margin-bottom: 20px;
+}
+.menu li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+section {
+  height: max-content;
+}
+
+.main {
+  background-color: #e2e3e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.main div {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0082e6;
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  background-color: #402327;
+  justify-content: space-between;
+  padding: 10px 20px;
+  padding-bottom: 20px;
+  color: #f2f2f2;
+}
+
+footer img {
+  height: 300px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+}
+
+footer div {
+  text-align: center;
+}
+
+.button {
+  height: 50px;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: rgb(208, 54, 79);
+  border: none;
+  color: white;
+}
+
+.main-content {
+  margin-bottom: 10px;
+}
+.eca {
+  background-color: #ffffff;
+  height: fit-content;
+  padding: 20px 150px 35px 150px;
+}
+h3 {
+  font-size: 25px;
+  width: fit-content;
+  padding: 0px;
+  border-bottom: 3px rgb(164, 79, 79) solid;
+}
+#eca_logo {
+  margin-top: 17px;
+  height: 55px;
+}
+.subhead {
+  display: flex;
+}
+
+.info {
+  font-size: 20px;
+}
+
+.left {
+  margin-top: 100px;
+}
+
+/*new slide*/
+.image {
+  vertical-align: middle;
+  width: 450px;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  float: left;
+  width: 450px;
+  height: 320px;
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: -1px 5px 15px black;
+  max-width: 450px;
+}
+.right {
+  float: right;
+  margin-left: 20px;
+}
+.dot4,
+.dot3,
+.dot2,
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Media Queries */
+
+@media (max-width: 420px) {
+  nav img {
+    height: 100px;
+    width: auto;
+  }
+
+  ul {
+    margin-left: -20px;
+    top: 60px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .navbar .menu li {
+    margin-bottom: 0px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer img {
+    height: 200px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #check:checked ~ ul {
+    left: 0px;
+  }
+
+  /*for content*/
+  .eca {
+    background-color: #ffffff;
+    padding: 10px 14px 10px 22px;
+  }
+  h3 {
+    font-size: 19px;
+    width: fit-content;
+    padding: 0px;
+    border-bottom: 3px rgb(164, 79, 79) solid;
+  }
+  #eca_logo {
+    height: 42px;
+    margin-top: 14px;
+  }
+  .subhead {
+    display: flex;
+  }
+
+  .info {
+    font-size: 15px;
+  }
+  .left {
+    margin-top: 0px;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    float: none;
+    width: 350px;
+    height: 250px;
+    margin-top: 0px;
+    border: 8px solid #ffffff;
+  }
+  .right {
+    float: none;
+    margin-left: 0px;
+  }
+  .dot4,
+  .dot3,
+  .dot2,
+  .dot {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media (max-width: 858px) {
+  .navbar .menu {
+    flex-direction: column;
+    padding: 0;
+  }
+  .navbar .checkbtn {
+    display: block;
+  }
+
+  .navbar .menu li {
+    height: 10px;
+  }
+
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #402327;
+    top: 110px;
+    left: -120%;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .navbar ul li a {
+    font-size: 18px;
+  }
+
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  /*for content*/
+  .eca {
+    background-color: #ffffff;
+    padding: 10px 20px 10px 32px;
+  }
+  h3 {
+    width: fit-content;
+    padding: 0px;
+    border-bottom: 3px rgb(164, 79, 79) solid;
+  }
+
+  .subhead {
+    display: flex;
+  }
+
+  .info {
+    font-size: 19px;
+  }
+
+  .left {
+    margin-top: 0px;
+  }
+
+  .dot4,
+  .dot3,
+  .dot2,
+  .dot {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media (max-width: 952px) {
+  nav .menu li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 750px) {
+  ul li {
+    height: 10px;
+  }
+}
