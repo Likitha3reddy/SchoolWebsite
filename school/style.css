@@ -202,7 +202,7 @@ section {
 
 footer {
   display: flex;
-  border: 2px dashed white;
+  /* border: 2px dashed white; */
   background-color: #402327;
   justify-content: space-between;
   padding: 10px 20px;
