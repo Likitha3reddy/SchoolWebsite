@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Responsive FAQ Accordion/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+     
+      header {
+      position: fixed;
+      width: 100vw;
+    }
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.navbar img {
+  height: 100%;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  /* margin-right: 6%; */
+}
+   * {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Hind", sans-serif;
+        background: #fff;
+        color: #4d5974;
+        display: flex;
+        min-height: 100vh;
+      }
+      .main {
+        background-color: #97020d;
+        flex-direction: column;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+      }
+      .school {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-weight: 500;
+      }
+
+      .application {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        background-color:#9b59b6;
+        background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 70%,rgb(18, 142, 99));
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 0px;
+        line-height: 200%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 2px 5px 14px #fc7f0c;
+      }
+      .left {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .right {
+        display: flex;
+        justify-content: space-around;
+      }
+      .white-color {
+        color: white;
+      }
+   
+
+      .btn {
+         border: 1px solid white;
+        text-decoration: none;
+  width: 170px;
+  padding: 2px 12px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn {
+  background-color: transparent;
+  border: 3px solid #a500d7;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #f7f7f7;
+}
+.btn:hover {
+  box-shadow: 0 0 10px 0 #d3d700 inset, 0 0 20px 2px #00d7c3;
+  border: 3px solid #00d7c3;
+}
+
+
+
+      a:hover {
+        background-color: #92278f;
+        size: 200%;
+        border-radius: 2px;
+      }
+      .thirdrow {
+
+        margin: 100px 20px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 40px;
+        
+        
+      }
+      .image {
+        grid-column: 1/2;
+        transition: transform 0.5s;
+      }
+      .image:hover {
+      transform: scale(1.03);
+    }
+      .infrastructure {
+        grid-column: 2/-1;
+        background-color: #DA0C81;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px 2px gray;
+      }
+      .headd {
+        background-color: white;
+        color: #DA0C81;
+        text-align: center;
+      }
+      .clg-img {
+        width: 100%;
+        height: 100%;
+        background-origin: padding-box
+      }
+      .matter {
+        color: white;
+        padding: 50px 20px;
+        line-height: 200%;
+        font-weight: 400;
+        font-size: 18px;
+        transition: transform 0.5s;
+      }
+
+      .matter:hover {
+  transform: scale(1.05);
+}
+      .fourthrow {
+        margin: 100px 20px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 40px;
+      }
+      .images {
+        grid-column: 2/-1;
+        margin:10px 10px 10px 10px;
+      }
+      .staff {
+        grid-column: 1/-1;
+        background-color: #fc7f0c;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px 2px gray;
+      }
+      .headd {
+        background-color: white;
+        color: #92278f;
+        text-align: center;
+      }
+      .clg-imgs {
+        width: 100%;
+        height: 100%;
+        background-origin: padding-box
+        
+        }
+
+      @media (max-width: 994px) {
+        .school {
+          display: block;
+          text-align: center;
+        }
+        .application {
+          display: block;
+        }
+        .left {
+          padding-bottom: 15px;
+        }
+        .thirdrow {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .image {
+          grid-column: 1/-1;
+          
+        }
+        .infrastructure {
+          grid-column: 1/-1;
+        }
+        .staff {
+          grid-column: 1/-1;
+         
+        }
+        .images {
+          grid-column: 1/-1;
+          grid-row: 1;
+        }
+      }
+
+      .container {
+        margin: 0 auto;
+        padding: 4rem;
+        width: 48rem;
+      }
+
+      .accordion {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion .accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded="true"] {
+  color: #03b5d2;
+}
+
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+
+    h2 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #03b5d2;
+  
+  box-shadow: 2px 2px 2px 2px#dadcdc;
+  text-align: center;
+  /* text-transform: uppercase; */
+  /* text-decoration: underline; */
+  text-shadow: 2px 2px 2px #d1dbd9;
+  transition: all 0.5s ease-in-out;
+}
+
+h1{
+  box-shadow: 1px 2px 1px 2px#464848;
+ text-align: center;
+  /* text-transform: uppercase; */
+  /* text-decoration: underline; */
+  text-shadow: 2px 2px 2px #d1dbd9;
+  transition: all 0.5s ease-in-out;
+}
+h1,h2:hover {
+  /* transform: rotate(360deg); */
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  width: 100vw;
+}
+
+nav {
+  position: fixed;
+  left: 11;
+  top: 0;
+  right: 10;
+  padding-top: 0%;
+  height: 120px;
+  width: 100%;
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.navbar img {
+  height: 100%;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  margin-right: 6%;
+  height: 60px;
+  
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: #f2f2f2;
+  position: relative;
+  padding: 1px 0;
+}
+.submenu a {
+  content: none;
+  transform: scale(0.9);
+}
+.submenu a:hover {
+  content: none;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.submenu a:hover:before {
+  content: none;
+}
+.menu li a:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background-color: #f2f2f2;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.menu li a:hover:before {
+  width: 100%;
+}
+.submenu {
+  position: absolute;
+  top: 300%;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #402327;
+  padding: 10px;
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transform-origin: top center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.submenu li {
+  margin-bottom: 20px;
+}
+.menu li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+
+section {
+  height: max-content;
+}
+
+.main {
+  background-color: #e2e3e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.main div {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0082e6;
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  background-color: #402327;
+  justify-content: space-between;
+  padding: 10px 20px;
+  padding-bottom: 20px;
+  color: #f2f2f2;
+}
+
+footer img {
+  height: 300px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+}
+
+footer div {
+  text-align: center;
+}
+
+.button {
+  height: 50px;
+  padding: 15px;
+  margin-right: 10px;
+  background-color: rgb(208, 54, 79);
+  border: none;
+  color: white;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 420px) {
+  nav img {
+    height: 100px;
+    width: auto;
+  }
+
+  ul {
+    margin-left: -20px;
+    top: 60px;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .navbar .menu li{
+    margin-bottom: 0px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer img{
+    height: 200px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #check:checked ~ ul {
+    left: 0px;
+  }
+}
+
+@media (max-width: 858px) {
+  .navbar .menu {
+    flex-direction: column;
+    padding: 0;
+  }
+  .navbar .checkbtn {
+    display: block;
+  }
+
+  .navbar .menu li {
+    height: 10px;
+  }
+
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #402327;
+    top: 110px;
+    left: -120%;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 5%;
+  }
+
+  .navbar ul li a {
+    font-size: 18px;
+    line-height: 5%;
+  }
+
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 952px) {
+  nav .menu li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 750px) {
+  ul li {
+    height: 10px;
+  }
+}
+
+
+    </style>
+
+
+  </head>
+
+  <body>
+    <header id="header">
+      <nav style="background-color:#402327; position: relative; z-index: -10;">
+        <div class="navbar">
+          <img src="../likitha_logo.png" alt="" style="width:120px ;height:100px; position: absolute; top: 10px; left: 15px;">
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="bi bi-list"></i>
+          </label>
+          <ul class="menu" style="margin-top:25px; margin-left:30px;">
+            <li>
+              <a href="../viveka/viveka.html">HOME <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="../viveka/viveka.html">Campus</a></li>
+                <li><a href="../viveka/viveka.html">Who we are</a></li>
+                <li><a href="../viveka/viveka.html">Details</a></li>
+              </ul>
+            </li>
+            <li> 
+              <a href="../academics.html">ACADEMICS <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li> <a href="../academics.html">Pre primary</a></li>
+                <li><a href="../academics.html">Primary</a></li>
+                <li><a href="../academics.html">Secondary</a></li>
+                <li><a href="../academics.html">Senior secondary</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../index.html">CO-CURRICULUM <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="../index.html">ECA</a></li>
+                <li><a href="../index.html">Sport</a></li>
+                <li><a href="../index.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../school/school.html">ABOUT US <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="../school/school.html">Mission-vision</a></li>
+                <li><a href="../school/school.html">Faculty</a></li>
+                <li><a href="../school/school.html">Facilities</a></li>
+                <li><a href="../school/school.html">Achievments</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">ADMISSIONS <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="#">Admission process</a></li>
+                <li><a href="#">Enroll now</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../Viveka/parentlogin.html">LOGIN <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="../Viveka/parentlogin.html">Parent login</a></li>
+                <li><a href="../Viveka/parentlogin.html">Staff login</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">VIVEKA CAMPUSES <i class="bi bi-caret-down-fill"></i></i></a>
+              <ul class="submenu">
+                <li><a href="https://www.srivivekanandacentral.in/">VIVEKA foster school Tenali</a></li> 
+                <li><a href="../Viveka/viveka.html">VIVEKA foster school Ponnur</a></li>
+                <li><a href="../Viveka/viveka.html">VIVEKA foster school BAPATLA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="main-content" onscroll="changeHeaderStyle(event)">
+    <div class="page" style="margin-top:-28px ;">
+      <div class="main">
+        <!-- <p>HOME//ADMISSIONS</p> -->
+      </div>
+      <div class="school">
+        <h2 class="sch-name" style="color: #f26522; display: inline-block">
+          Viveka Educational Society
+        </h2>
+        <h4 class="sch-sub" style="color: #970202; display: inline-block; font-size:20px;">
+          - A place where learning is fun and meaningful
+        </h4>
+      </div>
+
+      <div class="application">
+        <div class="left">
+          <h2 class="white-color">NURSARY TO X</h2>
+          <h4 class="white-color">Admissions Open 2023-24</h4>
+        </div>
+        <div class="right">
+          <a href="./reg.html" class="white-color btn">Enroll Now</a>
+          <a href="./table.html" class="white-color btn">Fee Structure</a>
+        </div>
+      </div>
+      <div class="thirdrow">
+        
+        <div class="image" style="position:relative;z-index: -200;">
+          <img
+            class="clg-img"
+            src="https://i0.wp.com/avenuemail.in/wp-content/uploads/2022/03/j-1.jpg?fit=1600%2C1067&ssl=1"
+            alt=""
+          />
+        </div>
+        <div class="infrastructure" style="position:relative;z-index: -20;">
+          <div class="infra">
+            <h2 class="headd " >Admission Procedure for the Academic Session 2023 - 2024</h2>
+            <div class="matter">
+<ul style="line-height:10px;">
+    <li>Online Registration Form need to be filled up as an initial step.</li><br>
+    <li>For availing school transport :</li><br>
+    <ul><br>
+        <li>Prior to filling-up Online Registration Form, kindly click on the below <br><br>links for the bus stops.</li><br><br><br>
+        <li>Transport facility is provided from the listed stops only</li><br>
+    </ul>
+</ul>
+
+<ul>
+    <li>Documents required to upload at the time of Registration (Size Upto 100 kb for Photos(jpg) and upto 2MB for documents(JPEG/PDF)).</li><br>
+    <ul>
+      <br>
+        <li>Birth Certificate.</li><br>
+        <li>Candidate's Aadhar Card.</li><br>
+        <li>Certificate of category (if applicable)</li><br>
+        <li>Report card<br>
+            <ul><br>
+                <li>i- Classes II to IV admission - Term I report card copy of the current year and the <span>previous year.</span></li><br> <br>
+
+                <li>ii- Classes V to XI admission - Term I report card copy of the current year along with the previous two years report card.</li><br>
+            </ul>
+        </li><br>
+        <li>Latest Passport size photo of Mother, Father, and Child.</li><br>
+    </ul>
+</ul>
+           </p>
+          </div>
+        </div>
+      </div>
+      <div class="fourthrow" >
+        <div class="staff" style="position:relative;z-index: -200;">
+          <h2 class="headd" style="color: #f26522">Additional Info</h2>
+          <div class="matter">
+        <ul >
+          <li style="line-height: 1.6;">Registration fee of Rs. 600/- once paid is not refundable.</li><br>
+          <li style="line-height: 1.6;">Registration does not guarantee admission.</li><br>
+          <li style="line-height: 1.6;">Admission to Nursery (LKG/ PP1) and Preparatory (UKG/ PP2) is through Random Selection Method (Lottery).</li><br>
+          <li style="line-height: 1.6;">Admission to Class 1 onwards is done based on the preparedness of the child.</li><br>
+          <li style="line-height: 1.6;">Schedule of further process will be informed upon submission of Registration.</li><br>
+          <li >Selected students will be informed through Email / SMS.</li><br>
+          <li>TC to be submitted to the school office after getting admission.</li><br>
+          <li>For Classes II to IX admission process would commence in March 2023 as admissions are subject to vacancy.</li><br>
+        </ul>
+
+
+</div>
+        </div>
+        <div class="documents">
+        <!-- <div class="images">
+          <img
+            class="clg-imgs"
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+        </div> -->
+      </div>
+      </div>
+
+      
+
+      <div class="accordion" >
+        <div class="image-box" style="position:relative;z-index: -200;">
+          <img src="Responsive FAQ Accordion/images/mainImg.png" alt="" />
+        </div>
+
+        <div class="container" >
+          <h2 style="position:relative;z-index: -200;"><span>Admissions FAQ</span></h2>
+          <div class="accordion">
+        
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false" >
+                <span class="accordion-title" style="position:relative;z-index: -200;">What are the admission requirements?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  The admission requirements include a completed application form, previous academic records, letters of recommendation, and a personal statement. Specific requirements may vary by program.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">How do I apply for financial aid?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  To apply for financial aid, complete the FAFSA form and submit it by the priority deadline. there are  scholarship opportunities and their specific application processes.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">What is the application deadline?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Application deadlines vary by program. Generally, the fall semester application deadline is March 1st, and the spring semester deadline is October 1st. Check the specific program for exact dates.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-4" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">Can I visit the campus before applying?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, we encourage prospective students to visit our campus. We offer guided tours and information sessions throughout the year. 
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">Do you offer online courses?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, we sometime we offer online courses and programs. These are designed to provide flexibility for students who may not be able to attend in person. Visit our online learning page for more information.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-6" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">What are the tuition fees?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Tuition fees vary by program and residency status. Please visit our tuition and fees page for detailed information and the latest updates on costs.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-7" aria-expanded="false">
+                <span class="accordion-title"style="position:relative;z-index: -200;">Are there any student support services available?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, we offer a range of student support services including academic advising, career counseling, mental health services, and tutoring. Our goal is to support our students' success in all areas.
+                </p>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <button id="accordion-button-8" aria-expanded="false">
+                <span class="accordion-title" style="position:relative;z-index: -200;">How can I get in touch with the admissions office?</span>
+                <span class="icon" aria-hidden="true" style="position:absolute;z-index: -200;"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  You can contact the admissions office via email or by phone. Our office hours are Monday to Friday, 9 AM to 5 PM. We look forward to assisting you.
+                </p>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+      function changeHeaderStyle(event) {
+  const headerDiv = document.querySelector('.navbar');
+  const anchorElements = document.querySelectorAll('.navbar a');
+
+  if (window.scrollY > 250) {
+    headerDiv.style.transition = 'color 2s';
+    headerDiv.style.backgroundColor = '#402327';
+  } else {
+    headerDiv.style.transition = 'color 2s';
+    headerDiv.style.backgroundColor = '#00000016';
+  }
+}
+window.addEventListener('scroll', changeHeaderStyle);
+
+
+
+
+
+
+      const items = document.querySelectorAll(".accordion button");
+
+      function toggleAccordion() {
+        const itemToggle = this.getAttribute("aria-expanded");
+
+        for (i = 0; i < items.length; i++) {
+          items[i].setAttribute("aria-expanded", "false");
+        }
+
+        if (itemToggle == "false") {
+          this.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      items.forEach((item) => item.addEventListener("click", toggleAccordion));
+    </script>
+  </body>
+</html>
+
+
+
+
+
+ 
